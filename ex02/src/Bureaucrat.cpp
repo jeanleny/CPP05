@@ -10,7 +10,7 @@ Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name), _grade(grade)
 {
 	std::cout << "Bureaucrat argument constructor called" << std::endl;
 	if (grade > 150)
-		throw Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooLowException();
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 }
@@ -72,9 +72,11 @@ void	Bureaucrat::gradeDecrement()
 void	Bureaucrat::signForm(AForm &f)
 {
 	f.beSigned(*this);
+	std::cout << f.getName() << " is signed by " << getName() << std::endl;
 }
 
-void	Bureaucrat::executeForm(AForm const & form)
+void	Bureaucrat::executeForm(AForm const & form) const
 {
 	form.execute(*this);
+	std::cout << getName() << " executed " << form.getName() << std::endl;
 }

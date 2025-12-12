@@ -72,4 +72,5 @@ void	Bureaucrat::gradeDecrement()
 void	Bureaucrat::signForm(Form &f)
 {
 	f.beSigned(*this);
+	std::cout << f.getName() << " is signed by " << getName() << std::endl;
 }

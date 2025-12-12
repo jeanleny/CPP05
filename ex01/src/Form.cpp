@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& stream, Form const& rhs)
 	else 
 		std::cout << rhs.getName() << " : state is unsigned" << std::endl;
 	std::cout << rhs.getName() << " : sign grade  is " << rhs.getSignedGrade() << std::endl;
-	std::cout << rhs.getName() << " : exec grade is " << rhs.getExecGrade() << std::endl;
+	std::cout << rhs.getName() << " : exec grade is " << rhs.getExecGrade();
 	return (stream);
 }
 
@@ -71,18 +71,19 @@ int	Form::getExecGrade()const
 
 void	Form::beSigned(const Bureaucrat& signatory)
 {
-	if (!this->_signed)
+	if (this->_signed)
 	{
-		if (signatory.getGrade() < this->getSignedGrade())
-		{
-			std::cout << this->getName() << " is signed by " << signatory.getName() << std::endl;
-			this->_signed = true;	
-			return ;
-		}
-		else
-		{
-			std::cout << signatory.getName() << " couldn't sign " << this->getName() << " because grade is too low" << std::endl;
-			throw Form::GradeTooLowException();
-		}
+		std::cout << signatory.getName() << " couldn't sign " << this->getName() << " because is already signed" << std::endl;
+		return ;
+	}
+	if (signatory.getGrade() <= this->getSignedGrade())
+	{
+		this->_signed = true;	
+		return ;
+	}
+	else
+	{
+		std::cout << signatory.getName() << " couldn't sign " << this->getName() << " because grade is too low" << std::endl;
+		throw Form::GradeTooLowException();
 	}
 }

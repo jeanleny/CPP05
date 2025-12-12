@@ -37,10 +37,14 @@ int main()
 
 	Form f1;
 	Form f2("b-64", false, 2, 4);
-	Form f3("b-64", false, 2, 4);
+	Form f3("c-16", false, 2, 4);
 
 	std::cout << f1 << std::endl;
 	std::cout << f2 << std::endl;
+	std::cout << obj << std::endl;
+	std::cout << obj1 << std::endl;
+	f1.beSigned(obj1);
+	f2.beSigned(obj1);
 	try
 	{
 		f1.beSigned(obj1);

@@ -10,7 +10,9 @@ NAME		= ibmproject
 SRC			+= src/main.cpp						\
 			   src/Bureaucrat.cpp				\
 			   src/AForm.cpp					\
-			   src/ShrubberyCreationForm.cpp
+			   src/ShrubberyCreationForm.cpp	\
+			   src/RobotomyRequestForm.cpp		\
+			   src/PresidentialPardonForm.cpp
 
 OBJ			= ${SRC:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o}
 DEP			= $(OBJ:.o=.d)

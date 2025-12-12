@@ -76,10 +76,9 @@ void	AForm::beSigned(const Bureaucrat& signatory)
 		std::cout << signatory.getName() << " couldn't sign " << this->getName() << " because is already signed" << std::endl;
 		return ;
 	}
-	if (signatory.getGrade() < this->getSignedGrade())
+	if (signatory.getGrade() <= this->getSignedGrade())
 	{
-		std::cout << this->getName() << " is signed by " << signatory.getName() << std::endl;
-		this->_signed = true;	
+		_signed = true;
 		return ;
 	}
 	else
@@ -91,21 +90,5 @@ void	AForm::beSigned(const Bureaucrat& signatory)
 
 void AForm::execute(Bureaucrat const& executor) const
 {
-	if (this->getSigned())
-	{
-		std::cout << this->getName() << " is already signed" << std::endl;
-		return ;
-	}
-	else if (this->getExecGrade() > executor.getGrade())
-	{
-		throw AForm::GradeTooLowException();
-	}
-	try
-	{
-		this->beSigned(executor);
-	}
-	catch (std::exception e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	(void)executor;
 }
