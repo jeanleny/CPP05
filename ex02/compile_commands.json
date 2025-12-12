@@ -1,0 +1,20 @@
+[
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex02",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/main.cpp", "-o", "object/main.o"],
+	"file": "src/main.cpp",
+	"output": "object/main.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex02",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Bureaucrat.cpp", "-o", "object/Bureaucrat.o"],
+	"file": "src/Bureaucrat.cpp",
+	"output": "object/Bureaucrat.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex02",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/AForm.cpp", "-o", "object/AForm.o"],
+	"file": "src/AForm.cpp",
+	"output": "object/AForm.o"
+}
+]
