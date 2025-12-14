@@ -1,0 +1,44 @@
+[
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/main.cpp", "-o", "object/main.o"],
+	"file": "src/main.cpp",
+	"output": "object/main.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Bureaucrat.cpp", "-o", "object/Bureaucrat.o"],
+	"file": "src/Bureaucrat.cpp",
+	"output": "object/Bureaucrat.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/AForm.cpp", "-o", "object/AForm.o"],
+	"file": "src/AForm.cpp",
+	"output": "object/AForm.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/ShrubberyCreationForm.cpp", "-o", "object/ShrubberyCreationForm.o"],
+	"file": "src/ShrubberyCreationForm.cpp",
+	"output": "object/ShrubberyCreationForm.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/RobotomyRequestForm.cpp", "-o", "object/RobotomyRequestForm.o"],
+	"file": "src/RobotomyRequestForm.cpp",
+	"output": "object/RobotomyRequestForm.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/PresidentialPardonForm.cpp", "-o", "object/PresidentialPardonForm.o"],
+	"file": "src/PresidentialPardonForm.cpp",
+	"output": "object/PresidentialPardonForm.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/5th/CPP/CPP_05/ex03",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Intern.cpp", "-o", "object/Intern.o"],
+	"file": "src/Intern.cpp",
+	"output": "object/Intern.o"
+}
+]

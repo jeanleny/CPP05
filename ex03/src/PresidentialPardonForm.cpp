@@ -1,11 +1,11 @@
 #include <PresidentialPardonForm.hpp>
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("FORG-36", false, 25, 5), _target("Marvin")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("presidential pardon", false, 25, 5), _target("Marvin")
 {
 	std::cout << "default PresidentialPardonForm constructor called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string _target) : AForm("FORG-36", false, 25, 5), _target(_target)
+PresidentialPardonForm::PresidentialPardonForm(std::string _target) : AForm("presidential pardon", false, 25, 5), _target(_target)
 {
 	std::cout << "default PresidentialPardonForm constructor called" << std::endl;
 }
