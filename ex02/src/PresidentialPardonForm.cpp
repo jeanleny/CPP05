@@ -1,11 +1,11 @@
 #include <PresidentialPardonForm.hpp>
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("FORG-36", false, 25, 5), _target("Marvin")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("presidential form", false, 25, 5), _target("Marvin")
 {
 	std::cout << "default PresidentialPardonForm constructor called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string _target) : AForm("FORG-36", false, 25, 5), _target(_target)
+PresidentialPardonForm::PresidentialPardonForm(std::string _target) : AForm("presidential form", false, 25, 5), _target(_target)
 {
 	std::cout << "default PresidentialPardonForm constructor called" << std::endl;
 }
@@ -35,6 +35,10 @@ void PresidentialPardonForm::execute(Bureaucrat const& executor) const
 	if (executor.getGrade() > 5)
 	{
 		throw Bureaucrat::GradeTooLowException();
+	}
+	else if (!getSigned())
+	{
+		throw Bureaucrat::UnsignedContractException();
 	}
 	std::cout << _target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }

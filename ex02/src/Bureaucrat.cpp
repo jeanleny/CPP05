@@ -39,6 +39,11 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Grade is too low");
 }
 
+const char* Bureaucrat::UnsignedContractException::what() const throw()
+{
+	return ("Contract is unsigned");
+}
+
 std::ostream& operator<<(std::ostream& stream, Bureaucrat const& rhs)
 {
 	stream << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();

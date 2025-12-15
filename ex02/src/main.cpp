@@ -6,25 +6,35 @@
 
 int main()
 {
-	try
-	{
-		Bureaucrat						jack(0, "Jack");
-	}
-	catch (std::exception e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	Bureaucrat						henry(25, "Henry");
-	PresidentialPardonForm			oui("Michel le iencli");
-	std::cout << henry << std::endl;
-	std::cout << oui << std::endl;
+	Bureaucrat andy(5, "Andy");
+	Bureaucrat jim(25, "Jim");
+	Bureaucrat kevin(70, "Kevin");
+	Bureaucrat cathy(140, "Cathy");
+
+	ShrubberyCreationForm scf("random yard");
+	RobotomyRequestForm rrf("local goat");
+	PresidentialPardonForm ppf("random bloke");
+
+	std::cout << "\n" << cathy << std::endl;
+	std::cout << scf << "\n" << std::endl;
 	try 
 	{
-		henry.signForm(oui);
+		andy.executeForm(scf);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	std::cout << oui << std::endl;
+
+	std::cout << "\n" << cathy << std::endl;
+	std::cout << scf << "\n" << std::endl;
+	try 
+	{
+		cathy.signForm(scf);
+		cathy.executeForm(scf);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }

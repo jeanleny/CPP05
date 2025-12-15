@@ -2,12 +2,12 @@
 #include <AForm.hpp>
 #include <cstdlib>
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("ROBOTOMY-G59", false, 72, 45), _target("Marvin")
+RobotomyRequestForm::RobotomyRequestForm() : AForm("robotomy request", false, 72, 45), _target("Marvin")
 {
 	std::cout << "default RobotomyRequestForm constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string _target) : AForm("ROBOTOMY-G59", false, 72, 45), _target(_target)
+RobotomyRequestForm::RobotomyRequestForm(std::string _target) : AForm("robotomy request", false, 72, 45), _target(_target)
 {
 	std::cout << "default RobotomyRequestForm constructor called" << std::endl;
 }
@@ -37,6 +37,10 @@ void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 	if (executor.getGrade() > 45)
 	{
 		throw Bureaucrat::GradeTooLowException();
+	}
+	else if (!getSigned())
+	{
+		throw Bureaucrat::UnsignedContractException();
 	}
 	srand(time(NULL));
 	if (rand() % 2 == 0)

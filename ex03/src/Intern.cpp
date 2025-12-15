@@ -40,7 +40,7 @@ AForm* Intern::makeForm(std::string fname, std::string ftarget)
 		case 2 :
 			return (new PresidentialPardonForm(ftarget));
 		default :
-			std::cout << "Intern couldn't create the form " << fname << " is unkown" << std::endl;
+			std::cout << "Intern couldn't create the form, " << fname << " is unkown" << std::endl;
 			return (NULL);
 	}
 }

@@ -1,11 +1,11 @@
 #include <ShrubberyCreationForm.hpp>
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("SHRUB-27", false, 145, 137), _target("Marvin")
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("shrubbery creation", false, 145, 137), _target("Marvin")
 {
 	std::cout << "default ShrubberyCreationForm constructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string _target) : AForm("SHRUB-27", false, 145, 137), _target(_target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string _target) : AForm("shrubbery creation", false, 145, 137), _target(_target)
 {
 	std::cout << "default ShrubberyCreationForm constructor called" << std::endl;
 }
@@ -35,6 +35,10 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 	if (executor.getGrade() > 137)
 	{
 		throw Bureaucrat::GradeTooLowException();
+	}
+	else if (!getSigned())
+	{
+		throw Bureaucrat::UnsignedContractException();
 	}
 	std::string name = getTarget() + "_shrubbery";
 	std::ofstream file(name.c_str());

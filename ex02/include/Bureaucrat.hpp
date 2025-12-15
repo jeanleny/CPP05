@@ -34,6 +34,12 @@ class Bureaucrat
 			const char* what() const throw();
 	};
 
+	class UnsignedContractException : public std::exception
+	{
+		public :
+			const char* what() const throw();
+	};
+
 	private:
 		const std::string	_name;
 		int					_grade;
